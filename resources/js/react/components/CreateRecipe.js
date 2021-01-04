@@ -5,11 +5,11 @@ import TextInput from "./TextInput";
 import AddComponent from "./AddComponent";
 import ComponentList from "./ComponentList";
 import Collapsible from "./Collapsible";
-import { v1 as uuidv1 } from "uuid";
-import { PRODUCT_ADD, STOP_LOADING_UI, LOADING_UI } from "../types/types";
+import { PRODUCT_ADD } from "../types/types";
 import { Button } from "./Button";
 import axios from 'axios';
-
+import { API_BASE_URL } from '../config';
+import { loadingAction } from '../actions/loaderHelper';
 
 const CreateRecipe = () => {
   useEffect(() => {
@@ -52,19 +52,11 @@ const CreateRecipe = () => {
     });
   };
 
-  const BASE_URL = "http://localhost:8000/api"
-
-
-  async function sendNewProduct (newProduct) {
-    console.log("jestesmy")
-    dispatch({ type: LOADING_UI});
-    const response = await  axios.post(`${BASE_URL}/product`, newProduct).then((result)=> {
-      console.log("jestesmy w result", result)
-
-      return result;
+  const sendNewProduct = async (newProduct) => {
+    loadingAction(dispatch, async () => {
+      const response = await axios.post(`${API_BASE_URL}/product`, newProduct);
+      dispatch({ type: PRODUCT_ADD, payload: response.data });
     })
-    dispatch({ type: PRODUCT_ADD, payload: response.data });
-    dispatch({ type: STOP_LOADING_UI});
   }
 
   const handleSubmit = (event) => {
@@ -73,9 +65,6 @@ const CreateRecipe = () => {
       productName: state.productName,
       components: state.components,
     };
-
-    console.log("newproduct", newProduct);
-
     sendNewProduct(newProduct);
     setState({
       ...state,

@@ -39,7 +39,7 @@ const ProductTable = (props) => {
     });
     return arr.reduce((prev, next) => {
       return prev + next;
-    });
+    }, 0);
   };
 
   const totalWeight = (eventTargetValue) => {

@@ -3,19 +3,24 @@ import { StoreContext } from "../contexts/StoreContext";
 import M from "materialize-css";
 import Collapsible from "./Collapsible";
 import { PRODUCT_DELETE } from "../types/types";
-
-const productDelete = (id) => (dispatch) => {
-  dispatch({
-    type: PRODUCT_DELETE,
-    payload: id,
-  })
-}
+import { API_BASE_URL } from "../config";
+import { loadingAction } from '../actions/loaderHelper';
 
 const ProductList = () => {
   useEffect(() => {
     M.AutoInit();
   }, []);
 
+  const deleteProduct = async (id) => {
+    loadingAction(dispatch, async () => {
+       await axios.delete(`${API_BASE_URL}/product/${id}`);
+      return dispatch({
+        type: PRODUCT_DELETE,
+        payload: id,
+      });
+    })
+  };
+  
   const { store, dispatch } = useContext(StoreContext);
 
   return (
@@ -32,7 +37,7 @@ const ProductList = () => {
                   <div className=''>
                     <h3>{product.productName}</h3>
                     <button
-                      onClick={() => productDelete(product.id)}
+                      onClick={() => deleteProduct(product.id)}
                     >
                       <i className='material-icons'>delete_forever</i>
                     </button>

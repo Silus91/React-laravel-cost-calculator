@@ -1,14 +1,13 @@
 import React, {useContext } from 'react';
 import { INGREDIENT_ADD, INGREDIENT_EDIT, STOP_LOADING_UI, LOADING_UI } from "../types/types";
 import { StoreContext } from "../contexts/StoreContext";
-
-const BASE_URL = "http://localhost:8000/api"
+import { API_BASE_URL } from '../config';
 
 //work around how to mke it possible to be connected
    export async function sendAddDataIngredient (newIngredient) {
         const { dispatch } = useContext(StoreContext);
     dispatch({ type: LOADING_UI});
-    const response = await  axios.post(`${BASE_URL}/ingredient`, newIngredient).then((result)=> {
+    const response = await  axios.post(`${API_BASE_URL}/ingredient`, newIngredient).then((result)=> {
       return result;
     })
     dispatch({ type: INGREDIENT_ADD, payload: response.data });
@@ -22,7 +21,7 @@ export async function sendEditDataIngredient (newIngredient) {
     dispatch({ type: LOADING_UI});
     console.log("send edit action after loader")
 
-    const response = await  axios.patch(`${BASE_URL}/ingredient/${newIngredient.id}`, newIngredient).then(function(result) {
+    const response = await  axios.patch(`${API_BASE_URL}/ingredient/${newIngredient.id}`, newIngredient).then(function(result) {
     return result;
     });
     dispatch({

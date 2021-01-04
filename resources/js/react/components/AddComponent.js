@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import M from "materialize-css";
-import { v1 as uuidv1 } from "uuid";
 import { Button } from "./Button";
 import TextInput from "./TextInput";
 
@@ -12,10 +11,10 @@ const AddComponent = ({ addComponentToList, ingredients }) => {
 
   useEffect(() => {
     M.AutoInit();
-  }, []);
+  }, [ingredients]);
 
   const dataMap = () => {
-    const newComponent = {
+    return {
       ingredientName: state.ingredientRatio.split(" ").slice(1).join(" "),
       ingredientRatio: parseFloat(state.ingredientRatio.split(" ")[0]),
       componentWeight: parseFloat(state.componentWeight),
@@ -23,13 +22,11 @@ const AddComponent = ({ addComponentToList, ingredients }) => {
         state.ingredientRatio.split(" ")[0] * state.componentWeight
       ),
     };
-    return newComponent;
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newComponent = dataMap();
-    addComponentToList(newComponent);
+    addComponentToList(dataMap());
     setState({ ...state, componentWeight: "", ingredientRatio: "" });
   };
 
@@ -39,15 +36,15 @@ const AddComponent = ({ addComponentToList, ingredients }) => {
       [event.target.name]: event.target.value,
     });
   };
-
+//zrobic z selectem albo rerender albo wyjebac tego materializa
   const renderSelect = () => {
     return (
       <select name='ingredientRatio' onChange={handleChange}>
         <option> Select one</option>
-        {ingredients && ingredients.map((ingredient) => {
+        {ingredients.map((ingredient, index) => {
           return (
             <option
-              key={ingredient.id}
+              key={index}
               value={`${ingredient.ingredientRatio} ${ingredient.ingredientName}`}
             >
               {ingredient.ingredientName}

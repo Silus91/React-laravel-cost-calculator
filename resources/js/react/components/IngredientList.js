@@ -4,24 +4,21 @@ import { INGREDIENT_DELETE } from "../types/types";
 import M from "materialize-css";
 import Collapsible from "./Collapsible";
 import AddEditIngredient from "./AddEditIngredient";
+import { API_BASE_URL } from '../config';
+import { loadingAction } from '../actions/loaderHelper';
 
 const IngredientList = () => {
 
   const { store, dispatch } = useContext(StoreContext);
 
   const deleteIngredient = (id) => {
-    const BASE_URL = "http://localhost:8000/api"
-
-    axios.delete(`${BASE_URL}/ingredient/${id}`).then(function(result) {
-      console.log("delete ingredient", result);
-      return new Promise(function(resolve, reject) {
-        return resolve;
-      })
-  })
-    return dispatch({
-      type: INGREDIENT_DELETE,
-      payload: id,
-    });
+    loadingAction(dispatch, async () => {
+       await axios.delete(`${API_BASE_URL}/ingredient/${id}`);
+      return dispatch({
+        type: INGREDIENT_DELETE,
+        payload: id,
+      });
+    })
   };
 
   useEffect(() => {
@@ -32,7 +29,7 @@ const IngredientList = () => {
   return (
     <Collapsible title='Ingredien List' icon='list'>
       <div className='card-content'>
-        <AddEditIngredient id='#id' />
+        <AddEditIngredient  />
         <table className='striped'>
           <thead>
             <tr>
@@ -42,7 +39,6 @@ const IngredientList = () => {
             </tr>
           </thead>
           <tbody>
-            {console.log("store w ing list",store.ingredients)}
           {store.ingredients ? store.ingredients.map((ingredient) => {
               return (
                   <tr key={ingredient.id}>

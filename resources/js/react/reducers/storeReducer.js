@@ -17,7 +17,6 @@ export const storeReducer = (state, action) => {
     case "INGREDIENT_EDIT":
       return {
         ...state, ingredients: state.ingredients.map((ingredient) => {
-          console.log("action payload", action.payload)
         return ingredient.id === action.id
           ? (ingredient = action.payload)
           : ingredient

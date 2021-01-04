@@ -1,12 +1,14 @@
 import React, { useState, useContext, useEffect } from "react";
-import { INGREDIENT_ADD, INGREDIENT_EDIT, STOP_LOADING_UI, LOADING_UI } from "../types/types";
+import { INGREDIENT_ADD, INGREDIENT_EDIT } from "../types/types";
 import M from "materialize-css";
 import TextInput from "./TextInput";
 import { StoreContext } from "../contexts/StoreContext";
 import { Button } from "./Button";
 import axios from 'axios';
+import { API_BASE_URL } from "../config";
+import { loadingAction } from '../actions/loaderHelper';
 
-const AddEditIngredient = (props) => {
+const AddEditIngredient = ({id = 'id', ...props}) => {
   const { dispatch } = useContext(StoreContext);
 
   const [state, setState] = useState({
@@ -35,7 +37,6 @@ const AddEditIngredient = (props) => {
 
   const dataMap = () => {
     const newIngredient = {
-      id: props.ingredient? props.ingredient.id : "",
       ingredientName: state.ingredientName,
       ingredientCost: parseFloat(state.ingredientCost),
       ingredientWeight: parseFloat(state.ingredientWeight),
@@ -43,15 +44,13 @@ const AddEditIngredient = (props) => {
         state.ingredientCost / state.ingredientWeight
       ),
     };
-    console.log("tutaj nowy ing", newIngredient)
-
+    if(props.ingredient){
+      newIngredient.id = props.ingredient.id
+    }
     return newIngredient;
   };
 
-
-  const BASE_URL = "http://localhost:8000/api"
-
-  async function sendDataIngredient (newIngredient) {
+  function sendDataIngredient (newIngredient) {
     if (props.ingredient) {
       sendEditIngredient(newIngredient);
       } else {
@@ -59,26 +58,24 @@ const AddEditIngredient = (props) => {
       }
   }
 
-  async function sendNewIngredient (newIngredient) {
-    dispatch({ type: LOADING_UI});
-    const response = await  axios.post(`${BASE_URL}/ingredient`, newIngredient).then((result)=> {
-      return result;
+  const sendNewIngredient = (newIngredient) => {
+    loadingAction(dispatch, async () => {
+      const response = await axios.post(`${API_BASE_URL
+      }/ingredient`, newIngredient);
+      dispatch({ type: INGREDIENT_ADD, payload: response.data });
     })
-    dispatch({ type: INGREDIENT_ADD, payload: response.data });
-    dispatch({ type: STOP_LOADING_UI});
   }
 
-    async function sendEditIngredient (newIngredient) {
-      dispatch({ type: LOADING_UI});
-      const response = await  axios.patch(`${BASE_URL}/ingredient/${newIngredient.id}`, newIngredient).then(function(result) {
-        return result;
-      });
+  const sendEditIngredient = (newIngredient) => {
+      loadingAction(dispatch, async () => {
+      const response = await axios.patch(`${API_BASE_URL
+      }/ingredient/${newIngredient.id}`, newIngredient);
       dispatch({
         type: INGREDIENT_EDIT,
         payload: response.data,
         id: response.data.id,
       });
-      dispatch({ type: STOP_LOADING_UI});
+    })
   }
 
   const handleSubmit = (event) => {
@@ -94,11 +91,11 @@ const AddEditIngredient = (props) => {
     <div>
       <a
         className='waves-effect waves-light btn modal-trigger'
-        data-target={props.id}
+        data-target={id}
       >
         {props.ingredient ? "Edit" : "Add New"}
       </a>
-      <div id={props.id} className='modal'>
+      <div id={id} className='modal'>
         <form onSubmit={handleSubmit}>
           <div className='modal-content'>
             <h4> {props.ingredient ? "Edit" : "Add New Ingredient"}</h4>
@@ -129,7 +126,6 @@ const AddEditIngredient = (props) => {
               htmlFor='ingredientWeight'
               label='Ingredient Weight'
             />
-
             <div className='modal-footer'>
               <Button
                 type='submit'

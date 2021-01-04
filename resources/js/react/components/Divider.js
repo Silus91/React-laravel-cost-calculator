@@ -5,8 +5,8 @@ import TextInput from "./TextInput";
 const Divider = (props) => {
   const [state, setState] = useState({
     divider: "",
-    valuePerItem: "",
-    weightPerItem: "",
+    valuePerItem: "0",
+    weightPerItem: "0",
   });
   const handleChange = (event) => {
     setState({ ...state, divider: event.target.value });

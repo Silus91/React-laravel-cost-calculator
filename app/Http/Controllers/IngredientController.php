@@ -54,6 +54,6 @@ class IngredientController extends Controller
     {
         $ingredient = Ingredient::findOrFail($id);
         $ingredient->delete();
-        return 204;
+        return response()->json($id, 200);
     }
 }

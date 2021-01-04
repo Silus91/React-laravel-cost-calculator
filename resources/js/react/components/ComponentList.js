@@ -11,10 +11,10 @@ const ComponentList = ({ components }) => {
           </tr>
         </thead>
         <tbody>
-          {components.map((component) => {
-            const { id, ingredientName, componentCost } = component;
+          {components.map((component,index) => {
+            const { ingredientName, componentCost } = component;
             return (
-              <tr key={id}>
+              <tr key={index}>
                 <td className='flow-text'>{ingredientName}</td>
                 <td className='flow-text'>
                   {parseFloat(componentCost).toFixed(2)}
