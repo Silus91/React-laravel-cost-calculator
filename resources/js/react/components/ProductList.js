@@ -3,7 +3,6 @@ import { StoreContext } from "../contexts/StoreContext";
 import M from "materialize-css";
 import Collapsible from "./Collapsible";
 import { PRODUCT_DELETE } from "../types/types";
-import { API_BASE_URL } from "../config";
 import { loadingAction } from '../actions/loaderHelper';
 
 const ProductList = () => {
@@ -22,6 +21,8 @@ const ProductList = () => {
   };
   
   const { store, dispatch } = useContext(StoreContext);
+  const API_BASE_URL = process.env.API_BASE_URL;
+
 
   return (
     <Collapsible title='Product List' icon='list'>

@@ -4,12 +4,13 @@ import { INGREDIENT_DELETE } from "../types/types";
 import M from "materialize-css";
 import Collapsible from "./Collapsible";
 import AddEditIngredient from "./AddEditIngredient";
-import { API_BASE_URL } from '../config';
 import { loadingAction } from '../actions/loaderHelper';
 
 const IngredientList = () => {
 
   const { store, dispatch } = useContext(StoreContext);
+  const API_BASE_URL = process.env.API_BASE_URL;
+
 
   const deleteIngredient = (id) => {
     loadingAction(dispatch, async () => {

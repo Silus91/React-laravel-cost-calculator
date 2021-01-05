@@ -80544,7 +80544,7 @@ var Divider = function Divider(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -80554,8 +80554,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
 /* harmony import */ var _AddEditIngredient__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddEditIngredient */ "./resources/js/react/components/AddEditIngredient.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../config */ "./resources/js/react/config.js");
-/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -80570,20 +80569,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
 var IngredientList = function IngredientList() {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_2__["StoreContext"]),
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
+  var API_BASE_URL = process.env.API_BASE_URL;
+
   var deleteIngredient = function deleteIngredient(id) {
-    Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_8__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_7__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios["delete"]("".concat(_config__WEBPACK_IMPORTED_MODULE_7__["API_BASE_URL"], "/ingredient/").concat(id));
+              return axios["delete"]("".concat(API_BASE_URL, "/ingredient/").concat(id));
 
             case 2:
               return _context.abrupt("return", dispatch({
@@ -80631,6 +80631,7 @@ var IngredientList = function IngredientList() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IngredientList);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -80720,7 +80721,7 @@ var Loader = function Loader() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -80729,14 +80730,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
 /* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../config */ "./resources/js/react/config.js");
-/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 
 
 
@@ -80756,13 +80755,13 @@ var ProductList = function ProductList() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_7__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
                 return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
                       case 0:
                         _context.next = 2;
-                        return axios["delete"]("".concat(_config__WEBPACK_IMPORTED_MODULE_6__["API_BASE_URL"], "/product/").concat(id));
+                        return axios["delete"]("".concat(API_BASE_URL, "/product/").concat(id));
 
                       case 2:
                         return _context.abrupt("return", dispatch({
@@ -80795,6 +80794,7 @@ var ProductList = function ProductList() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
+  var API_BASE_URL = process.env.API_BASE_URL;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Product List",
     icon: "list"
@@ -80828,6 +80828,7 @@ var ProductList = function ProductList() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ProductList);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -81057,20 +81058,6 @@ var TextInput = function TextInput(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TextInput);
-
-/***/ }),
-
-/***/ "./resources/js/react/config.js":
-/*!**************************************!*\
-  !*** ./resources/js/react/config.js ***!
-  \**************************************/
-/*! exports provided: API_BASE_URL */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "API_BASE_URL", function() { return API_BASE_URL; });
-var API_BASE_URL = "http://localhost:8000/api";
 
 /***/ }),
 
