@@ -36,7 +36,7 @@ const AddComponent = ({ addComponentToList, ingredients }) => {
       [event.target.name]: event.target.value,
     });
   };
-//zrobic z selectem albo rerender albo wyjebac tego materializa
+
   const renderSelect = () => {
     return (
       <select name='ingredientRatio' onChange={handleChange}>

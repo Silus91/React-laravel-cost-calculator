@@ -6351,7 +6351,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".mainApp {\n    background-image: url(\"/home/dawid/trening/laravel-react-calculator/storage/app/public/magic_logo (copy).png\");\n}\n", ""]);
 
 // exports
 
@@ -79731,7 +79731,7 @@ function Main() {
     materialize_css__WEBPACK_IMPORTED_MODULE_3___default.a.AutoInit();
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
+    className: "container mainApp"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_IngredientList__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CreateRecipe__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductList__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductScale__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
 }
 
@@ -79876,8 +79876,7 @@ var AddComponent = function AddComponent(_ref) {
 
   var handleChange = function handleChange(event) {
     setState(_objectSpread(_objectSpread({}, state), {}, _defineProperty({}, event.target.name, event.target.value)));
-  }; //zrobic z selectem albo rerender albo wyjebac tego materializa
-
+  };
 
   var renderSelect = function renderSelect() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {

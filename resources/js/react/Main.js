@@ -14,7 +14,7 @@ function Main() {
   }, []);
 
   return (
-    <div className='container'>
+    <div className='container mainApp'>
       <StoreContextProvider>
         <Loader />
         <IngredientList />

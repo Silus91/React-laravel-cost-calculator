@@ -52,7 +52,6 @@ const IngredientList = () => {
                         >
                             Delete
                         </button>
-                        {/* todo sprawdzic czemu za drugim editem nie pokazuje daty */}
                           <AddEditIngredient
                             id={ingredient.id}
                             ingredient={ingredient}
