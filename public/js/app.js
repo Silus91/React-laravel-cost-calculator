@@ -79969,7 +79969,6 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
- //import { API_BASE_URL } from "../config";
 
 
 var API_BASE_URL = process.env.API_BASE_URL;
@@ -80250,7 +80249,7 @@ var ComponentList = function ComponentList(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -80265,8 +80264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Button */ "./resources/js/react/components/Button.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../config */ "./resources/js/react/config.js");
-/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -80303,7 +80301,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var CreateRecipe = function CreateRecipe() {
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     materialize_css__WEBPACK_IMPORTED_MODULE_3___default.a.AutoInit();
@@ -80321,6 +80318,8 @@ var CreateRecipe = function CreateRecipe() {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_2__["StoreContext"]),
       store = _useContext.store,
       dispatch = _useContext.dispatch;
+
+  var API_BASE_URL = process.env.API_BASE_URL;
 
   var mapData = function mapData(newComponent) {
     if (state.components.length <= 0) {
@@ -80350,14 +80349,14 @@ var CreateRecipe = function CreateRecipe() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_12__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_11__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
                 var response;
                 return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
                       case 0:
                         _context.next = 2;
-                        return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_11__["API_BASE_URL"], "/product"), newProduct);
+                        return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post("".concat(API_BASE_URL, "/product"), newProduct);
 
                       case 2:
                         response = _context.sent;
@@ -80429,6 +80428,7 @@ var CreateRecipe = function CreateRecipe() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CreateRecipe);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 

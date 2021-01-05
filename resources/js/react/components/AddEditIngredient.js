@@ -5,7 +5,6 @@ import TextInput from "./TextInput";
 import { StoreContext } from "../contexts/StoreContext";
 import { Button } from "./Button";
 import axios from 'axios';
-//import { API_BASE_URL } from "../config";
 import { loadingAction } from '../actions/loaderHelper';
 
 const API_BASE_URL = process.env.API_BASE_URL;

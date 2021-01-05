@@ -8,7 +8,6 @@ import Collapsible from "./Collapsible";
 import { PRODUCT_ADD } from "../types/types";
 import { Button } from "./Button";
 import axios from 'axios';
-import { API_BASE_URL } from '../config';
 import { loadingAction } from '../actions/loaderHelper';
 
 const CreateRecipe = () => {
@@ -23,6 +22,8 @@ const CreateRecipe = () => {
   });
 
   const { store,dispatch } = useContext(StoreContext);
+  const API_BASE_URL = process.env.API_BASE_URL;
+
 
   const mapData = (newComponent) => {
     if (state.components.length <= 0) {
