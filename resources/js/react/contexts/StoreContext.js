@@ -1,7 +1,6 @@
 import React, { useReducer, createContext, useEffect } from "react";
 import { storeReducer } from "../reducers/storeReducer";
 import {FETCH_INGREDIENTS, FETCH_PRODUCTS} from '../types/types';
-import { API_BASE_URL } from '../config';
 import { loadingAction } from '../actions/loaderHelper';
 
 const INITAL_STATE ={products:[],ingredients:[],loading:false};
@@ -11,6 +10,8 @@ export const StoreContext = createContext();
 const StoreContextProvider = (props) => {
 
     const [store, dispatch] = useReducer(storeReducer, INITAL_STATE);
+    const API_BASE_URL = process.env.API_BASE_URL;
+
 
     const fetchInitialValue = () => {
       loadingAction(dispatch, async () => {
