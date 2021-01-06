@@ -9,7 +9,6 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
-        <link rel="stylesheet" href="path/to/materialize.css" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <!-- Compiled and minified CSS -->
         <link
