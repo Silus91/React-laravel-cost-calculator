@@ -39,9 +39,10 @@ const ProductList = () => {
                   <div className=''>
                     <h3>{product.productName}</h3>
                     <button
-                      onClick={() => deleteProduct(product.id)}
+                        className='btn red darken-1'
+                        onClick={() => deleteIngredient(ingredient.id)}
                     >
-                      <i className='material-icons'>delete_forever</i>
+                        Delete
                     </button>
                     <table className='striped'>
                       <thead>

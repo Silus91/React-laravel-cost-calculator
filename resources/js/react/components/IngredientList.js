@@ -11,7 +11,6 @@ const IngredientList = () => {
   const { store, dispatch } = useContext(StoreContext);
   const API_BASE_URL = process.env.MIX_API_BASE_URL;
 
-
   const deleteIngredient = (id) => {
     loadingAction(dispatch, async () => {
        await axios.delete(`${API_BASE_URL}/ingredient/${id}`);

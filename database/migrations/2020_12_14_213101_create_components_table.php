@@ -21,8 +21,6 @@ class CreateComponentsTable extends Migration
             $table->integer("componentWeight");
             $table->integer("productRatio");
             $table->unsignedBigInteger('product_id');
-            //             $table->foreign('product_id')->references('id')->on('products');
-
             $table->index('product_id');
             $table->timestamps();
         });

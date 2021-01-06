@@ -16,9 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Route::get('ingredients','IngredientController@index');
-Route::post('ingredient','IngredientController@store');
-Route::patch('ingredient/{id}','IngredientController@update');
-Route::delete('ingredient/{id}','IngredientController@destroy');

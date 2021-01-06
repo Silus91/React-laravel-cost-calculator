@@ -27,10 +27,3 @@ Route::delete('ingredient/{id}','IngredientController@destroy');
 Route::get('products','ProductController@index');
 Route::post('product','ProductController@store');
 Route::delete('product/{id}','ProductController@destroy');
-
-
-// Route::get('product/{id}/components','ComponentController@index');
-// Route::post('product/{id}/component','ComponentController@store');
-
-
-
