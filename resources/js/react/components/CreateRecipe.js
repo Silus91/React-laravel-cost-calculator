@@ -22,7 +22,7 @@ const CreateRecipe = () => {
   });
 
   const { store,dispatch } = useContext(StoreContext);
-  const API_BASE_URL = process.env.API_BASE_URL;
+  const API_BASE_URL = process.env.MIX_API_BASE_URL;
 
 
   const mapData = (newComponent) => {

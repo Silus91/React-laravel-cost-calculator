@@ -6346,12 +6346,13 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".mainApp {\n    background-image: url(\"/home/dawid/trening/laravel-react-calculator/storage/app/public/magic_logo (copy).png\");\n}\n", ""]);
+exports.push([module.i, ".mainApp {\n    background-image: url(" + escape(__webpack_require__(/*! ./magic_logo.png */ "./resources/js/react/magic_logo.png")) + ");\n    background-repeat: no-repeat;\n    background-size: contain;\n    height: 500px;\n    background-position: center;\n}\n", ""]);
 
 // exports
 
@@ -6478,6 +6479,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -79922,7 +79950,7 @@ var AddComponent = function AddComponent(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -79971,7 +79999,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-var API_BASE_URL = process.env.API_BASE_URL;
+var API_BASE_URL = "http://localhost:8000/api";
 
 var AddEditIngredient = function AddEditIngredient(_ref) {
   var _ref$id = _ref.id,
@@ -80140,7 +80168,6 @@ var AddEditIngredient = function AddEditIngredient(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AddEditIngredient);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -80249,7 +80276,7 @@ var ComponentList = function ComponentList(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -80319,7 +80346,7 @@ var CreateRecipe = function CreateRecipe() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
-  var API_BASE_URL = process.env.API_BASE_URL;
+  var API_BASE_URL = "http://localhost:8000/api";
 
   var mapData = function mapData(newComponent) {
     if (state.components.length <= 0) {
@@ -80428,7 +80455,6 @@ var CreateRecipe = function CreateRecipe() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CreateRecipe);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -80544,7 +80570,7 @@ var Divider = function Divider(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -80574,7 +80600,7 @@ var IngredientList = function IngredientList() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
-  var API_BASE_URL = process.env.API_BASE_URL;
+  var API_BASE_URL = "http://localhost:8000/api";
 
   var deleteIngredient = function deleteIngredient(id) {
     Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_7__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
@@ -80631,7 +80657,6 @@ var IngredientList = function IngredientList() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (IngredientList);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -80721,7 +80746,7 @@ var Loader = function Loader() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -80745,6 +80770,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var ProductList = function ProductList() {
+  var API_BASE_URL = "http://localhost:8000/api";
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     materialize_css__WEBPACK_IMPORTED_MODULE_3___default.a.AutoInit();
   }, []);
@@ -80794,7 +80820,6 @@ var ProductList = function ProductList() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
-  var API_BASE_URL = process.env.API_BASE_URL;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Product List",
     icon: "list"
@@ -80828,7 +80853,6 @@ var ProductList = function ProductList() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ProductList);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -81070,7 +81094,7 @@ var TextInput = function TextInput(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreContext", function() { return StoreContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreContext", function() { return StoreContext; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -81113,7 +81137,7 @@ var StoreContextProvider = function StoreContextProvider(props) {
       store = _useReducer2[0],
       dispatch = _useReducer2[1];
 
-  var API_BASE_URL = process.env.API_BASE_URL;
+  var API_BASE_URL = "http://localhost:8000/api";
 
   var fetchInitialValue = function fetchInitialValue() {
     Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_4__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
@@ -81167,7 +81191,6 @@ var StoreContextProvider = function StoreContextProvider(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (StoreContextProvider);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -81198,6 +81221,17 @@ var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addS
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/react/magic_logo.png":
+/*!*******************************************!*\
+  !*** ./resources/js/react/magic_logo.png ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/magic_logo.png?26019c97b350b7a6f8961b35f6740425";
 
 /***/ }),
 

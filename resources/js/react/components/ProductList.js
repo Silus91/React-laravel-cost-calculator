@@ -6,6 +6,8 @@ import { PRODUCT_DELETE } from "../types/types";
 import { loadingAction } from '../actions/loaderHelper';
 
 const ProductList = () => {
+  const API_BASE_URL = process.env.MIX_API_BASE_URL;
+
   useEffect(() => {
     M.AutoInit();
   }, []);
@@ -21,7 +23,6 @@ const ProductList = () => {
   };
   
   const { store, dispatch } = useContext(StoreContext);
-  const API_BASE_URL = process.env.API_BASE_URL;
 
 
   return (

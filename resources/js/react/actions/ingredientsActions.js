@@ -1,7 +1,6 @@
 import React, {useContext } from 'react';
 import { INGREDIENT_ADD, INGREDIENT_EDIT, STOP_LOADING_UI, LOADING_UI } from "../types/types";
 import { StoreContext } from "../contexts/StoreContext";
-import { API_BASE_URL } from '../config';
 
 //work around how to mke it possible to be connected
    export async function sendAddDataIngredient (newIngredient) {
@@ -31,17 +30,3 @@ export async function sendEditDataIngredient (newIngredient) {
     });
     dispatch({ type: STOP_LOADING_UI});
 }
-
-// export async function deleteIngredient (id) {
-
-//     axios.delete(`${BASE_URL}/ingredient/${id}`).then(function(result) {
-//       console.log("delete ingredient", result);
-//       return new Promise(function(resolve, reject) {
-//         return resolve;
-//       })
-//   })
-//     return dispatch({
-//       type: INGREDIENT_DELETE,
-//       payload: id,
-//     });
-//   };

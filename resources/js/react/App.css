@@ -1,3 +1,7 @@
 .mainApp {
-    background-image: url("/home/dawid/trening/laravel-react-calculator/storage/app/public/magic_logo (copy).png");
+    background-image: url("magic_logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 500px;
+    background-position: center;
 }

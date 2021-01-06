@@ -7,8 +7,7 @@ import { Button } from "./Button";
 import axios from 'axios';
 import { loadingAction } from '../actions/loaderHelper';
 
-const API_BASE_URL = process.env.API_BASE_URL;
-
+const API_BASE_URL = process.env.MIX_API_BASE_URL;
 
 const AddEditIngredient = ({id = 'id', ...props}) => {
   const { dispatch } = useContext(StoreContext);
