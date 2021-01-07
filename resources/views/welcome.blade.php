@@ -10,7 +10,7 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
+<!-- do zrobienia wciaz -->
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
         <link rel="icon" href="{{ URL::asset('favicon.ico') }}" type="image/x-icon"/>
         <link type="image/x-icon" rel="apple-touch-icon" href="favicon.ico" />
