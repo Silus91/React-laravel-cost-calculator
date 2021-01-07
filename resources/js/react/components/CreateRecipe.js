@@ -20,7 +20,6 @@ const CreateRecipe = () => {
   const { store,dispatch } = useContext(StoreContext);
   const API_BASE_URL = process.env.MIX_API_BASE_URL;
 
-
   const mapData = (newComponent) => {
     if (state.components.length <= 0) {
       setState({
