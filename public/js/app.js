@@ -79966,7 +79966,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-var API_BASE_URL = "http://localhost:8000/api";
+var API_BASE_URL = "https://magic-bubble-calculator.herokuapp.com/api/";
 
 var AddEditIngredient = function AddEditIngredient(_ref) {
   var _ref$id = _ref.id,
@@ -80300,7 +80300,7 @@ var CreateRecipe = function CreateRecipe() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
-  var API_BASE_URL = "http://localhost:8000/api";
+  var API_BASE_URL = "https://magic-bubble-calculator.herokuapp.com/api/";
 
   var mapData = function mapData(newComponent) {
     if (state.components.length <= 0) {
@@ -80551,7 +80551,7 @@ var IngredientList = function IngredientList() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
-  var API_BASE_URL = "http://localhost:8000/api";
+  var API_BASE_URL = "https://magic-bubble-calculator.herokuapp.com/api/";
 
   var deleteIngredient = function deleteIngredient(id) {
     Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
@@ -80715,7 +80715,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var ProductList = function ProductList() {
-  var API_BASE_URL = "http://localhost:8000/api";
+  var API_BASE_URL = "https://magic-bubble-calculator.herokuapp.com/api/";
 
   var deleteProduct = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(id) {
@@ -81064,7 +81064,7 @@ var StoreContextProvider = function StoreContextProvider(props) {
       store = _useReducer2[0],
       dispatch = _useReducer2[1];
 
-  var API_BASE_URL = "http://localhost:8000/api";
+  var API_BASE_URL = "https://magic-bubble-calculator.herokuapp.com/api/";
 
   var fetchInitialValue = function fetchInitialValue() {
     Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_4__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
