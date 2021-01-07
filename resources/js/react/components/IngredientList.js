@@ -1,7 +1,6 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { StoreContext } from "../contexts/StoreContext";
 import { INGREDIENT_DELETE } from "../types/types";
-import M from "materialize-css";
 import Collapsible from "./Collapsible";
 import AddEditIngredient from "./AddEditIngredient";
 import { loadingAction } from '../actions/loaderHelper';
@@ -20,10 +19,6 @@ const IngredientList = () => {
       });
     })
   };
-
-  useEffect(() => {
-      M.AutoInit();
-  }, []);
 
   const tableTitle = ["Name", "Weight", "Price", "Actions"];
   return (

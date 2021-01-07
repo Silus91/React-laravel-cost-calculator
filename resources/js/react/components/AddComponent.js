@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import M from "materialize-css";
 import { Button } from "./Button";
 import TextInput from "./TextInput";
 
@@ -10,7 +9,6 @@ const AddComponent = ({ addComponentToList, ingredients }) => {
   });
 
   useEffect(() => {
-    M.AutoInit();
   }, [ingredients]);
 
   const dataMap = () => {

@@ -12,7 +12,6 @@ const StoreContextProvider = (props) => {
     const [store, dispatch] = useReducer(storeReducer, INITAL_STATE);
     const API_BASE_URL = process.env.MIX_API_BASE_URL;
 
-
     const fetchInitialValue = () => {
       loadingAction(dispatch, async () => {
           const ingredientResponse = await axios.get(`${API_BASE_URL}/ingredients`);
@@ -29,7 +28,6 @@ const StoreContextProvider = (props) => {
     }  
 
       useEffect(() => {
-        M.AutoInit();
         if (!store.ingredients.length > 0 || !store.products.length > 0) {
           fetchInitialValue();
           }

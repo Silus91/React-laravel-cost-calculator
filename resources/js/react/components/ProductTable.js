@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
-import M from "materialize-css";
+import React, { useState } from "react";
 import TextInput from "./TextInput";
 import Divider from "./Divider";
 
 const ProductTable = (props) => {
-  useEffect(() => {
-    M.AutoInit();
-  }, []);
 
   const [state, setState] = useState({
     usedWeight: 0,

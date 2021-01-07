@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
-import M from "materialize-css";
+import React from "react";
 
 const Collapsible = (props) => {
-  useEffect(() => {
-    M.AutoInit();
-  }, []);
 
   return (
     <div>

@@ -1,13 +1,9 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { StoreContext } from "../contexts/StoreContext";
-import M from "materialize-css";
 import Collapsible from "./Collapsible";
 import ProductTable from "./ProductTable";
 
 const ProductScale = () => {
-  useEffect(() => {
-    M.AutoInit();
-  }, []);
 
   const { store } = useContext(StoreContext);
 

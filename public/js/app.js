@@ -79813,10 +79813,8 @@ var loadingAction = /*#__PURE__*/function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Button */ "./resources/js/react/components/Button.js");
-/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button */ "./resources/js/react/components/Button.js");
+/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -79839,7 +79837,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var AddComponent = function AddComponent(_ref) {
   var addComponentToList = _ref.addComponentToList,
       ingredients = _ref.ingredients;
@@ -79852,9 +79849,7 @@ var AddComponent = function AddComponent(_ref) {
       state = _useState2[0],
       setState = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_1___default.a.AutoInit();
-  }, [ingredients]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {}, [ingredients]);
 
   var dataMap = function dataMap() {
     return {
@@ -79894,7 +79889,7 @@ var AddComponent = function AddComponent(_ref) {
     className: "card-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSubmit
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, renderSelect()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, renderSelect()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
     type: "number",
     name: "componentWeight",
     className: "validate",
@@ -79902,7 +79897,7 @@ var AddComponent = function AddComponent(_ref) {
     onChange: handleChange,
     htmlFor: "componentWeight",
     label: "Component Weight"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_1__["Button"], {
     text: "submit",
     type: "submit",
     className: state.componentWeight <= 0 ? "btn disabled" : "btn teal darken-2 z-depth-2"
@@ -80177,15 +80172,9 @@ var Button = function Button(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_1__);
-
 
 
 var Collapsible = function Collapsible(props) {
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_1___default.a.AutoInit();
-  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "collapsible"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -80253,17 +80242,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
-/* harmony import */ var _AddComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AddComponent */ "./resources/js/react/components/AddComponent.js");
-/* harmony import */ var _ComponentList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ComponentList */ "./resources/js/react/components/ComponentList.js");
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
-/* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Button */ "./resources/js/react/components/Button.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
+/* harmony import */ var _AddComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AddComponent */ "./resources/js/react/components/AddComponent.js");
+/* harmony import */ var _ComponentList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ComponentList */ "./resources/js/react/components/ComponentList.js");
+/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Button */ "./resources/js/react/components/Button.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -80299,12 +80286,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var CreateRecipe = function CreateRecipe() {
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_3___default.a.AutoInit();
-  }, []);
-
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
     productName: "",
     components: [],
@@ -80348,19 +80330,19 @@ var CreateRecipe = function CreateRecipe() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_11__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_10__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
                 var response;
                 return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
                       case 0:
                         _context.next = 2;
-                        return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post("".concat(API_BASE_URL, "/product"), newProduct);
+                        return axios__WEBPACK_IMPORTED_MODULE_9___default.a.post("".concat(API_BASE_URL, "/product"), newProduct);
 
                       case 2:
                         response = _context.sent;
                         dispatch({
-                          type: _types_types__WEBPACK_IMPORTED_MODULE_8__["PRODUCT_ADD"],
+                          type: _types_types__WEBPACK_IMPORTED_MODULE_7__["PRODUCT_ADD"],
                           payload: response.data
                         });
 
@@ -80399,19 +80381,19 @@ var CreateRecipe = function CreateRecipe() {
     }));
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_6__["default"], {
     icon: "add_circle",
     title: "Create Reciple"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddComponent__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddComponent__WEBPACK_IMPORTED_MODULE_4__["default"], {
     addComponentToList: addComponentToList,
     ingredients: store.ingredients
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "divider"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ComponentList__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ComponentList__WEBPACK_IMPORTED_MODULE_5__["default"], {
     components: state.components
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
     onSubmit: handleSubmit
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_3__["default"], {
     type: "text",
     name: "productName",
     className: "validate",
@@ -80419,7 +80401,7 @@ var CreateRecipe = function CreateRecipe() {
     onChange: handleChange,
     htmlFor: "productName",
     label: "Product Name"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_9__["Button"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_8__["Button"], {
     type: "submit",
     className: state.productName <= 0 ? "btn disabled" : "btn teal darken-2 z-depth-2",
     text: "Submit"
@@ -80548,17 +80530,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
 /* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
-/* harmony import */ var _AddEditIngredient__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AddEditIngredient */ "./resources/js/react/components/AddEditIngredient.js");
-/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AddEditIngredient */ "./resources/js/react/components/AddEditIngredient.js");
+/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 
 
 
@@ -80575,7 +80554,7 @@ var IngredientList = function IngredientList() {
   var API_BASE_URL = "http://localhost:8000/api";
 
   var deleteIngredient = function deleteIngredient(id) {
-    Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_7__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -80598,16 +80577,13 @@ var IngredientList = function IngredientList() {
     })));
   };
 
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_4___default.a.AutoInit();
-  }, []);
   var tableTitle = ["Name", "Weight", "Price", "Actions"];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Ingredien List",
     icon: "list"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
     className: "striped"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", null, tableTitle.map(function (title) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", {
@@ -80621,7 +80597,7 @@ var IngredientList = function IngredientList() {
       onClick: function onClick() {
         return deleteIngredient(ingredient.id);
       }
-    }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__["default"], {
       id: ingredient.id,
       ingredient: ingredient
     })));
@@ -80723,11 +80699,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
-/* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
-/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
+/* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -80740,12 +80714,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
 var ProductList = function ProductList() {
   var API_BASE_URL = "http://localhost:8000/api";
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_3___default.a.AutoInit();
-  }, []);
 
   var deleteProduct = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(id) {
@@ -80753,7 +80723,7 @@ var ProductList = function ProductList() {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+              Object(_actions_loaderHelper__WEBPACK_IMPORTED_MODULE_5__["loadingAction"])(dispatch, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
                 return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
@@ -80763,7 +80733,7 @@ var ProductList = function ProductList() {
 
                       case 2:
                         return _context.abrupt("return", dispatch({
-                          type: _types_types__WEBPACK_IMPORTED_MODULE_5__["PRODUCT_DELETE"],
+                          type: _types_types__WEBPACK_IMPORTED_MODULE_4__["PRODUCT_DELETE"],
                           payload: id
                         }));
 
@@ -80792,7 +80762,7 @@ var ProductList = function ProductList() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "Product List",
     icon: "list"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -80811,7 +80781,7 @@ var ProductList = function ProductList() {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, product.productName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       className: "btn red darken-1",
       onClick: function onClick() {
-        return deleteIngredient(ingredient.id);
+        return deleteProduct(product.id);
       }
     }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
       className: "striped"
@@ -80839,25 +80809,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
-/* harmony import */ var _ProductTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProductTable */ "./resources/js/react/components/ProductTable.js");
-
+/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _ProductTable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductTable */ "./resources/js/react/components/ProductTable.js");
 
 
 
 
 
 var ProductScale = function ProductScale() {
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_2___default.a.AutoInit();
-  }, []);
-
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_1__["StoreContext"]),
       store = _useContext.store;
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Product Scale",
     icon: "eject"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -80865,7 +80828,7 @@ var ProductScale = function ProductScale() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "collapsible popout"
   }, store.products.map(function (product) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTable__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: product.id,
       product: product
     });
@@ -80887,10 +80850,8 @@ var ProductScale = function ProductScale() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
-/* harmony import */ var _Divider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Divider */ "./resources/js/react/components/Divider.js");
+/* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
+/* harmony import */ var _Divider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Divider */ "./resources/js/react/components/Divider.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -80913,12 +80874,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var ProductTable = function ProductTable(props) {
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_1___default.a.AutoInit();
-  }, []);
-
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     usedWeight: 0,
     totalCost: 0,
@@ -80968,7 +80924,7 @@ var ProductTable = function ProductTable(props) {
   var renderRatio = function renderRatio(product, component) {
     if (component.id === product.components[0].id) {
       component.usedWeight = parseFloat(state.usedWeight);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
         type: "number",
         name: "usedWeight",
         className: "validate",
@@ -81001,7 +80957,7 @@ var ProductTable = function ProductTable(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: component.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, component.ingredientName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, component.componentWeight), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, renderRatio(props.product, component)));
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Cost:", parseFloat(state.totalCost).toFixed(2)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Weight:", parseFloat(state.totalWeight).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Divider__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Cost:", parseFloat(state.totalCost).toFixed(2)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Weight:", parseFloat(state.totalWeight).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Divider__WEBPACK_IMPORTED_MODULE_2__["default"], {
     totalWeight: state.totalWeight,
     totalCost: state.totalCost
   }))));
@@ -81146,8 +81102,6 @@ var StoreContextProvider = function StoreContextProvider(props) {
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    M.AutoInit();
-
     if (!store.ingredients.length > 0 || !store.products.length > 0) {
       fetchInitialValue();
     }

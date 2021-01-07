@@ -1,16 +1,11 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { StoreContext } from "../contexts/StoreContext";
-import M from "materialize-css";
 import Collapsible from "./Collapsible";
 import { PRODUCT_DELETE } from "../types/types";
 import { loadingAction } from '../actions/loaderHelper';
 
 const ProductList = () => {
   const API_BASE_URL = process.env.MIX_API_BASE_URL;
-
-  useEffect(() => {
-    M.AutoInit();
-  }, []);
 
   const deleteProduct = async (id) => {
     loadingAction(dispatch, async () => {
@@ -40,7 +35,7 @@ const ProductList = () => {
                     <h3>{product.productName}</h3>
                     <button
                         className='btn red darken-1'
-                        onClick={() => deleteIngredient(ingredient.id)}
+                        onClick={() => deleteProduct(product.id)}
                     >
                         Delete
                     </button>

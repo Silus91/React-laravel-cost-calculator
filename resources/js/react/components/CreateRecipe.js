@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { StoreContext } from "../contexts/StoreContext";
-import M from "materialize-css";
 import TextInput from "./TextInput";
 import AddComponent from "./AddComponent";
 import ComponentList from "./ComponentList";
@@ -11,10 +10,7 @@ import axios from 'axios';
 import { loadingAction } from '../actions/loaderHelper';
 
 const CreateRecipe = () => {
-  useEffect(() => {
-    M.AutoInit();
-  }, []);
-
+ 
   const [state, setState] = useState({
     productName: "",
     components: [],
