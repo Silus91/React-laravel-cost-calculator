@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../contexts/StoreContext";
 import { INGREDIENT_DELETE } from "../types/types";
-import Collapsible from "./Collapsible";
+import Collapsible from "./Collapsible/Collapsible";
 import AddEditIngredient from "./AddEditIngredient";
 import { loadingAction } from '../actions/loaderHelper';
 
@@ -22,7 +22,7 @@ const IngredientList = () => {
 
   const tableTitle = ["Name", "Weight", "Price", "Actions"];
   return (
-    <Collapsible title='Ingredien List' icon='list'>
+    <Collapsible title='Ingredien List' icon='list' bodyClassName='collapsible-body' headClassName='colla-header'>
       <div className='card-content'>
         <AddEditIngredient  />
         <table className='striped'>
@@ -41,16 +41,16 @@ const IngredientList = () => {
                       <td>{ingredient.ingredientWeight}</td>
                       <td>{ingredient.ingredientCost}</td>
                       <td>
+                        <AddEditIngredient
+                          id={ingredient.id}
+                          ingredient={ingredient}
+                        />
                         <button
-                            className='btn red darken-1'
-                            onClick={() => deleteIngredient(ingredient.id)}
+                          className='btn red darken-1'
+                          onClick={() => deleteIngredient(ingredient.id)}
                         >
-                            Delete
+                            X
                         </button>
-                          <AddEditIngredient
-                            id={ingredient.id}
-                            ingredient={ingredient}
-                          />
                       </td>
                   </tr>
               );

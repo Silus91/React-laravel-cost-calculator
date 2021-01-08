@@ -6351,7 +6351,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".mainApp {\n    /* background-image: url(\"magic_logo.png\");\n    background-repeat: no-repeat;\n    background-size: contain;\n    height: 500px;\n    background-position: center; */\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/react/components/Collapsible/Collapsible.css":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/react/components/Collapsible/Collapsible.css ***!
+  \***************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".colla-header {\n    background: linear-gradient(\n        270deg,\n        rgb(255, 255, 1) 2%,\n        rgb(0, 255, 255) 20%,\n        rgb(253, 0, 240) 50%,\n        rgb(255, 255, 255) 80%\n    );\n}\n", ""]);
 
 // exports
 
@@ -6371,6 +6390,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 // module
 exports.push([module.i, ".loaderContainer {\n    background-image: radial-gradient(\n        rgba(0, 17, 255, 0.3) 10%,\n        rgba(0, 0, 0, 0) 60%\n    );\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 2;\n}\n\n.preloader-wrapper {\n    position: absolute;\n    margin: auto;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 3rem;\n    height: 4rem;\n    z-index: 10;\n    -webkit-animation: rotate 5s linear infinite;\n    animation: rotate 5s linear infinite;\n}\n\n@-webkit-keyframes rotate {\n    0% {\n        transform: rotate(0deg);\n    }\n    25% {\n        transform: rotate(90deg);\n    }\n    50% {\n        transform: rotate(180deg);\n    }\n    75% {\n        transform: rotate(270deg);\n    }\n    100% {\n        transform: rotate(360deg);\n    }\n}\n\n@keyframes rotate {\n    0% {\n        transform: rotate(0deg);\n    }\n    25% {\n        transform: rotate(90deg);\n    }\n    50% {\n        transform: rotate(180deg);\n    }\n    75% {\n        transform: rotate(270deg);\n    }\n    100% {\n        transform: rotate(360deg);\n    }\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/react/components/list.css":
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/react/components/list.css ***!
+  \********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bodyPadding {\n    padding: 7.5px;\n}\n", ""]);
 
 // exports
 
@@ -79709,14 +79747,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.css */ "./resources/js/react/App.css");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_CreateRecipe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/CreateRecipe */ "./resources/js/react/components/CreateRecipe.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
-/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_IngredientList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/IngredientList */ "./resources/js/react/components/IngredientList.js");
-/* harmony import */ var _components_ProductList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/ProductList */ "./resources/js/react/components/ProductList.js");
-/* harmony import */ var _components_ProductScale__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/ProductScale */ "./resources/js/react/components/ProductScale.js");
-/* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
-/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Loader/Loader */ "./resources/js/react/components/Loader/Loader.js");
-
+/* harmony import */ var _components_IngredientList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/IngredientList */ "./resources/js/react/components/IngredientList.js");
+/* harmony import */ var _components_ProductList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ProductList */ "./resources/js/react/components/ProductList.js");
+/* harmony import */ var _components_ProductScale__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/ProductScale */ "./resources/js/react/components/ProductScale.js");
+/* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
+/* harmony import */ var _components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Loader/Loader */ "./resources/js/react/components/Loader/Loader.js");
 
 
 
@@ -79727,12 +79762,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Main() {
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    materialize_css__WEBPACK_IMPORTED_MODULE_3___default.a.AutoInit();
-  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container mainApp"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_IngredientList__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CreateRecipe__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductList__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductScale__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Loader_Loader__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_IngredientList__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CreateRecipe__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductList__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ProductScale__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Main);
@@ -80013,6 +80045,7 @@ var AddEditIngredient = function AddEditIngredient(_ref) {
       newIngredient.id = props.ingredient.id;
     }
 
+    console.log(newIngredient);
     return newIngredient;
   };
 
@@ -80161,10 +80194,40 @@ var Button = function Button(props) {
 
 /***/ }),
 
-/***/ "./resources/js/react/components/Collapsible.js":
-/*!******************************************************!*\
-  !*** ./resources/js/react/components/Collapsible.js ***!
-  \******************************************************/
+/***/ "./resources/js/react/components/Collapsible/Collapsible.css":
+/*!*******************************************************************!*\
+  !*** ./resources/js/react/components/Collapsible/Collapsible.css ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./Collapsible.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/react/components/Collapsible/Collapsible.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/react/components/Collapsible/Collapsible.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/react/components/Collapsible/Collapsible.js ***!
+  \******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -80172,20 +80235,19 @@ var Button = function Button(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Collapsible_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Collapsible.css */ "./resources/js/react/components/Collapsible/Collapsible.css");
+/* harmony import */ var _Collapsible_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Collapsible_css__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var Collapsible = function Collapsible(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "collapsible"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "collapsible-header"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "material-icons"
-  }, props.icon), props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "collapsible-body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: ""
-  }, props.children)))));
+    className: "collapsible-header ".concat(props.headClassName)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, props.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "collapsible-body ".concat(props.bodyClassName)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.children)))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Collapsible);
@@ -80245,7 +80307,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
 /* harmony import */ var _AddComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AddComponent */ "./resources/js/react/components/AddComponent.js");
 /* harmony import */ var _ComponentList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ComponentList */ "./resources/js/react/components/ComponentList.js");
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Collapsible/Collapsible */ "./resources/js/react/components/Collapsible/Collapsible.js");
 /* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Button */ "./resources/js/react/components/Button.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -80381,9 +80443,10 @@ var CreateRecipe = function CreateRecipe() {
     }));
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_6__["default"], {
     icon: "add_circle",
-    title: "Create Reciple"
+    title: "Create Product",
+    headClassName: "colla-header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddComponent__WEBPACK_IMPORTED_MODULE_4__["default"], {
     addComponentToList: addComponentToList,
     ingredients: store.ingredients
@@ -80493,22 +80556,24 @@ var Divider = function Divider(props) {
       valuePerItem = state.valuePerItem,
       weightPerItem = state.weightPerItem;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card horizontal row"
+    className: "row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-content col s6"
+    className: "divider"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-content col s12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "flow-text"
   }, "Total Value GBP", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "red-text"
-  }, parseFloat(props.totalCost).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Per 1 Item GBP", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, parseFloat(props.totalCost).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: " col s12"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: ""
+  }, renderDividerForm())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Per 1 Item GBP", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "red-text"
   }, parseFloat(valuePerItem).toFixed(2)), "Aproxx ~ Weight of 1 item +- g/ml", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "red-text"
-  }, parseFloat(weightPerItem).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-stacked col s6"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-content"
-  }, renderDividerForm())));
+  }, parseFloat(weightPerItem).toFixed(2))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Divider);
@@ -80530,7 +80595,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
 /* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Collapsible/Collapsible */ "./resources/js/react/components/Collapsible/Collapsible.js");
 /* harmony import */ var _AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AddEditIngredient */ "./resources/js/react/components/AddEditIngredient.js");
 /* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 
@@ -80578,9 +80643,11 @@ var IngredientList = function IngredientList() {
   };
 
   var tableTitle = ["Name", "Weight", "Price", "Actions"];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Ingredien List",
-    icon: "list"
+    icon: "list",
+    bodyClassName: "collapsible-body",
+    headClassName: "colla-header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
@@ -80592,15 +80659,15 @@ var IngredientList = function IngredientList() {
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tbody", null, store.ingredients ? store.ingredients.map(function (ingredient) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", {
       key: ingredient.id
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, " ", ingredient.ingredientName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, ingredient.ingredientWeight), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, ingredient.ingredientCost), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, " ", ingredient.ingredientName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, ingredient.ingredientWeight), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, ingredient.ingredientCost), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      id: ingredient.id,
+      ingredient: ingredient
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       className: "btn red darken-1",
       onClick: function onClick() {
         return deleteIngredient(ingredient.id);
       }
-    }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      id: ingredient.id,
-      ingredient: ingredient
-    })));
+    }, "X")));
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, "loading"))))));
 };
 
@@ -80699,14 +80766,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Collapsible/Collapsible */ "./resources/js/react/components/Collapsible/Collapsible.js");
 /* harmony import */ var _types_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../types/types */ "./resources/js/react/types/types.js");
 /* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./list.css */ "./resources/js/react/components/list.css");
+/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_list_css__WEBPACK_IMPORTED_MODULE_6__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -80762,13 +80832,15 @@ var ProductList = function ProductList() {
       store = _useContext.store,
       dispatch = _useContext.dispatch;
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "Product List",
-    icon: "list"
+    icon: "list",
+    bodyClassName: "bodyPadding",
+    headClassName: "colla-header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
-    className: "collapsible popout"
+    className: "collapsible"
   }, store.products.map(function (product) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
       key: product.id
@@ -80809,8 +80881,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_StoreContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/StoreContext */ "./resources/js/react/contexts/StoreContext.js");
-/* harmony import */ var _Collapsible__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Collapsible */ "./resources/js/react/components/Collapsible.js");
+/* harmony import */ var _Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Collapsible/Collapsible */ "./resources/js/react/components/Collapsible/Collapsible.js");
 /* harmony import */ var _ProductTable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductTable */ "./resources/js/react/components/ProductTable.js");
+/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./list.css */ "./resources/js/react/components/list.css");
+/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_list_css__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -80820,13 +80895,15 @@ var ProductScale = function ProductScale() {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_1__["StoreContext"]),
       store = _useContext.store;
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Collapsible__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Product Scale",
-    icon: "eject"
+    icon: "eject",
+    bodyClassName: "bodyPadding",
+    headClassName: "colla-header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "collapsible popout"
+    className: "collapsible"
   }, store.products.map(function (product) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductTable__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: product.id,
@@ -80852,6 +80929,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TextInput */ "./resources/js/react/components/TextInput.js");
 /* harmony import */ var _Divider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Divider */ "./resources/js/react/components/Divider.js");
+/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./list.css */ "./resources/js/react/components/list.css");
+/* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_list_css__WEBPACK_IMPORTED_MODULE_3__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -80869,6 +80948,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -80923,7 +81003,6 @@ var ProductTable = function ProductTable(props) {
 
   var renderRatio = function renderRatio(product, component) {
     if (component.id === product.components[0].id) {
-      component.usedWeight = parseFloat(state.usedWeight);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
         type: "number",
         name: "usedWeight",
@@ -80944,7 +81023,7 @@ var ProductTable = function ProductTable(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "collapsible-header"
   }, props.product.productName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "collapsible-body"
+    className: "collapsible-body bodyPadding"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: ""
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.product.productName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
@@ -80957,7 +81036,13 @@ var ProductTable = function ProductTable(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       key: component.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, component.ingredientName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, component.componentWeight), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, renderRatio(props.product, component)));
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Cost:", parseFloat(state.totalCost).toFixed(2)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Weight:", parseFloat(state.totalWeight).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Divider__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "divider"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Cost:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "red-text"
+  }, parseFloat(state.totalCost).toFixed(2))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Total Weight:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "red-text"
+  }, parseFloat(state.totalWeight).toFixed(2)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Divider__WEBPACK_IMPORTED_MODULE_2__["default"], {
     totalWeight: state.totalWeight,
     totalCost: state.totalCost
   }))));
@@ -81009,6 +81094,36 @@ var TextInput = function TextInput(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (TextInput);
+
+/***/ }),
+
+/***/ "./resources/js/react/components/list.css":
+/*!************************************************!*\
+  !*** ./resources/js/react/components/list.css ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./list.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/react/components/list.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -81078,21 +81193,22 @@ var StoreContextProvider = function StoreContextProvider(props) {
 
             case 2:
               ingredientResponse = _context.sent;
+              console.log(ingredientResponse);
               dispatch({
                 type: _types_types__WEBPACK_IMPORTED_MODULE_3__["FETCH_INGREDIENTS"],
                 payload: ingredientResponse.data
               });
-              _context.next = 6;
+              _context.next = 7;
               return axios.get("".concat(API_BASE_URL, "/products"));
 
-            case 6:
+            case 7:
               productResponse = _context.sent;
               dispatch({
                 type: _types_types__WEBPACK_IMPORTED_MODULE_3__["FETCH_PRODUCTS"],
                 payload: productResponse.data
               });
 
-            case 8:
+            case 9:
             case "end":
               return _context.stop();
           }

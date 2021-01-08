@@ -3,7 +3,7 @@ import { StoreContext } from "../contexts/StoreContext";
 import TextInput from "./TextInput";
 import AddComponent from "./AddComponent";
 import ComponentList from "./ComponentList";
-import Collapsible from "./Collapsible";
+import Collapsible from "./Collapsible/Collapsible";
 import { PRODUCT_ADD } from "../types/types";
 import { Button } from "./Button";
 import axios from 'axios';
@@ -71,7 +71,7 @@ const CreateRecipe = () => {
   };
 
   return (
-    <Collapsible icon='add_circle' title='Create Reciple'>
+    <Collapsible icon='add_circle' title='Create Product' headClassName='colla-header'>
       <AddComponent
         addComponentToList={addComponentToList}
         ingredients={store.ingredients}

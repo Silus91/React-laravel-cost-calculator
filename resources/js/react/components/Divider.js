@@ -48,20 +48,21 @@ const Divider = (props) => {
 
   const { divider, valuePerItem, weightPerItem } = state;
   return (
-    <div className='card horizontal row'>
-      <div className='card-content col s6'>
+    <div className='row'>
+      <div className='divider'></div>
+      <div className='card-content col s12'>
         <span className='flow-text'>
           Total Value GBP
           <p className='red-text'>{parseFloat(props.totalCost).toFixed(2)}</p>
         </span>
+        <div className=' col s12'>
+        <div className=''>{renderDividerForm()}</div>
+      </div>
         <br />
         Per 1 Item GBP
         <p className='red-text'>{parseFloat(valuePerItem).toFixed(2)}</p>
         Aproxx ~ Weight of 1 item +- g/ml
         <p className='red-text'>{parseFloat(weightPerItem).toFixed(2)}</p>
-      </div>
-      <div className='card-stacked col s6'>
-        <div className='card-content'>{renderDividerForm()}</div>
       </div>
     </div>
   );

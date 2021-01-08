@@ -1,0 +1,9 @@
+.colla-header {
+    background: linear-gradient(
+        270deg,
+        rgb(255, 255, 1) 2%,
+        rgb(0, 255, 255) 20%,
+        rgb(253, 0, 240) 50%,
+        rgb(255, 255, 255) 80%
+    );
+}

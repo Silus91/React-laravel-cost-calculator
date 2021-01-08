@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../contexts/StoreContext";
-import Collapsible from "./Collapsible";
+import Collapsible from "./Collapsible/Collapsible";
 import { PRODUCT_DELETE } from "../types/types";
 import { loadingAction } from '../actions/loaderHelper';
+import './list.css';
 
 const ProductList = () => {
   const API_BASE_URL = process.env.MIX_API_BASE_URL;
@@ -19,11 +20,10 @@ const ProductList = () => {
   
   const { store, dispatch } = useContext(StoreContext);
 
-
   return (
-    <Collapsible title='Product List' icon='list'>
+    <Collapsible title='Product List' icon='list' bodyClassName='bodyPadding' headClassName='colla-header'>
       <div className='card-content'>
-        <ul className='collapsible popout'>
+        <ul className='collapsible'>
           {store.products.map((product) => {
             return (
               <li key={product.id}>
@@ -34,8 +34,8 @@ const ProductList = () => {
                   <div className=''>
                     <h3>{product.productName}</h3>
                     <button
-                        className='btn red darken-1'
-                        onClick={() => deleteProduct(product.id)}
+                      className='btn red darken-1'
+                      onClick={() => deleteProduct(product.id)}
                     >
                         Delete
                     </button>

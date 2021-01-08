@@ -48,6 +48,7 @@ const AddEditIngredient = ({id = 'id', ...props}) => {
     if(props.ingredient){
       newIngredient.id = props.ingredient.id
     }
+    console.log(newIngredient)
     return newIngredient;
   };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextInput from "./TextInput";
 import Divider from "./Divider";
+import './list.css';
 
 const ProductTable = (props) => {
 
@@ -53,7 +54,6 @@ const ProductTable = (props) => {
 
   const renderRatio = (product, component) => {
     if (component.id === product.components[0].id) {
-      component.usedWeight = parseFloat(state.usedWeight);
       return (
         <form>
           <TextInput
@@ -77,7 +77,7 @@ const ProductTable = (props) => {
   return (
     <li key={props.product.id}>
       <div className='collapsible-header'>{props.product.productName}</div>
-      <div className='collapsible-body'>
+      <div className='collapsible-body bodyPadding'>
         <div className=''>
           <h3>{props.product.productName}</h3>
           <table className='striped'>
@@ -100,8 +100,9 @@ const ProductTable = (props) => {
               })}
             </tbody>
           </table>
-          <div>Total Cost:{parseFloat(state.totalCost).toFixed(2)}</div>
-          <div>Total Weight:{parseFloat(state.totalWeight).toFixed(2)}</div>
+          <div className='divider'></div>
+          <div>Total Cost:<p className='red-text'>{parseFloat(state.totalCost).toFixed(2)}</p></div>
+          <div>Total Weight:<p className='red-text'>{parseFloat(state.totalWeight).toFixed(2)}</p></div>
         </div>
         <div>
           <Divider
