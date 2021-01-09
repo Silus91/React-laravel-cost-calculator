@@ -19,7 +19,7 @@ class CreateComponentsTable extends Migration
             $table->decimal("ingredientRatio",9,7);
             $table->decimal("componentCost",5,3);
             $table->integer("componentWeight");
-            $table->decimal("productRatio",9,3);
+            $table->decimal("productRatio",9,5);
             $table->unsignedBigInteger('product_id');
             $table->index('product_id');
             $table->timestamps();
