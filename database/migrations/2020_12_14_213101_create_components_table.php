@@ -16,10 +16,10 @@ class CreateComponentsTable extends Migration
         Schema::create('components', function (Blueprint $table) {
             $table->id();
             $table->string("ingredientName");
-            $table->integer("ingredientRatio");
-            $table->integer("componentCost");
+            $table->decimal("ingredientRatio",9,7);
+            $table->decimal("componentCost",5,3);
             $table->integer("componentWeight");
-            $table->integer("productRatio");
+            $table->decimal("productRatio",9,3);
             $table->unsignedBigInteger('product_id');
             $table->index('product_id');
             $table->timestamps();
