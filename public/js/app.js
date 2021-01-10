@@ -80045,7 +80045,6 @@ var AddEditIngredient = function AddEditIngredient(_ref) {
       newIngredient.id = props.ingredient.id;
     }
 
-    console.log(newIngredient);
     return newIngredient;
   };
 
@@ -81249,22 +81248,21 @@ var StoreContextProvider = function StoreContextProvider(props) {
 
             case 2:
               ingredientResponse = _context.sent;
-              console.log(ingredientResponse);
               dispatch({
                 type: _types_types__WEBPACK_IMPORTED_MODULE_3__["FETCH_INGREDIENTS"],
                 payload: ingredientResponse.data
               });
-              _context.next = 7;
+              _context.next = 6;
               return axios.get("".concat(API_BASE_URL, "/products"));
 
-            case 7:
+            case 6:
               productResponse = _context.sent;
               dispatch({
                 type: _types_types__WEBPACK_IMPORTED_MODULE_3__["FETCH_PRODUCTS"],
                 payload: productResponse.data
               });
 
-            case 9:
+            case 8:
             case "end":
               return _context.stop();
           }
