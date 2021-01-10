@@ -4,6 +4,7 @@ import Collapsible from "./Collapsible/Collapsible";
 import { PRODUCT_DELETE } from "../types/types";
 import { loadingAction } from '../actions/loaderHelper';
 import './list.css';
+import DeleteModal from "./DeleteModal";
 
 const ProductList = () => {
   const API_BASE_URL = process.env.MIX_API_BASE_URL;
@@ -28,17 +29,16 @@ const ProductList = () => {
             return (
               <li key={product.id}>
                 <div className='collapsible-header'>
-                  <p>{product.productName}</p>
+                  {product.productName}
                 </div>
                 <div className='collapsible-body'>
                   <div className=''>
                     <h3>{product.productName}</h3>
-                    <button
-                      className='btn red darken-1'
-                      onClick={() => deleteProduct(product.id)}
-                    >
-                        Delete
-                    </button>
+                    <DeleteModal
+                      content='Product'
+                      onClick={()=> deleteProduct(product.id)}
+                      name={product.productName}
+                    />
                     <table className='striped'>
                       <thead>
                         <tr>

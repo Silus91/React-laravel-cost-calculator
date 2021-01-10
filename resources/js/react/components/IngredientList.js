@@ -4,6 +4,7 @@ import { INGREDIENT_DELETE } from "../types/types";
 import Collapsible from "./Collapsible/Collapsible";
 import AddEditIngredient from "./AddEditIngredient";
 import { loadingAction } from '../actions/loaderHelper';
+import DeleteModal from "./DeleteModal";
 
 const IngredientList = () => {
 
@@ -34,28 +35,28 @@ const IngredientList = () => {
             </tr>
           </thead>
           <tbody>
-          {store.ingredients ? store.ingredients.map((ingredient) => {
+            {store.ingredients ? store.ingredients.map((ingredient) => {
               return (
-                  <tr key={ingredient.id}>
-                      <td> {ingredient.ingredientName}</td>
-                      <td>{ingredient.ingredientWeight}</td>
-                      <td>{ingredient.ingredientCost}</td>
-                      <td>
-                        <AddEditIngredient
-                          id={ingredient.id}
-                          ingredient={ingredient}
-                        />
-                        <button
-                          className='btn red darken-1'
-                          onClick={() => deleteIngredient(ingredient.id)}
-                        >
-                            X
-                        </button>
-                      </td>
-                  </tr>
-              );
-            })
-           : <tr><td>loading</td></tr>}</tbody>
+                <tr key={ingredient.id}>
+                  <td> {ingredient.ingredientName}</td>
+                  <td>{ingredient.ingredientWeight}</td>
+                  <td>{ingredient.ingredientCost}</td>
+                  <td>
+                    <AddEditIngredient
+                      id={ingredient.id}
+                      ingredient={ingredient}
+                    />
+                    <DeleteModal
+                      content='Ingredient'
+                      onClick={()=> deleteIngredient(ingredient.id)}
+                      name={ingredient.ingredientName}
+                    />
+                  </td>
+                </tr>
+                );
+              })
+            : <tr><td>loading</td></tr>}
+          </tbody>
         </table>
       </div>
     </Collapsible>

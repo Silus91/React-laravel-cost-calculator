@@ -80188,7 +80188,8 @@ var Button = function Button(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: props.type,
     onClick: props.onCLick,
-    className: props.className
+    className: props.className,
+    "data-target": props.dataTarget
   }, props.text);
 };
 
@@ -80475,6 +80476,55 @@ var CreateRecipe = function CreateRecipe() {
 
 /***/ }),
 
+/***/ "./resources/js/react/components/DeleteModal.js":
+/*!******************************************************!*\
+  !*** ./resources/js/react/components/DeleteModal.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css */ "./node_modules/materialize-css/dist/js/materialize.js");
+/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Button */ "./resources/js/react/components/Button.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+
+var DeleteModal = function DeleteModal(_ref) {
+  var props = _extends({}, _ref);
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    materialize_css__WEBPACK_IMPORTED_MODULE_1___default.a.AutoInit();
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "btn red darken-1 modal-trigger",
+    "data-target": props.name
+  }, "X"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: props.name,
+    className: "modal"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Delete ", props.content, " ", props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Do you really want to Delete ", props.name, "?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-footer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    className: "modal-close waves-effect waves-green btn-flat",
+    text: "Cancel"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn red darken-1",
+    onClick: props.onClick
+  }, "Delete")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DeleteModal);
+
+/***/ }),
+
 /***/ "./resources/js/react/components/Divider.js":
 /*!**************************************************!*\
   !*** ./resources/js/react/components/Divider.js ***!
@@ -80598,11 +80648,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Collapsible/Collapsible */ "./resources/js/react/components/Collapsible/Collapsible.js");
 /* harmony import */ var _AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AddEditIngredient */ "./resources/js/react/components/AddEditIngredient.js");
 /* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
+/* harmony import */ var _DeleteModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DeleteModal */ "./resources/js/react/components/DeleteModal.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -80662,12 +80714,13 @@ var IngredientList = function IngredientList() {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, " ", ingredient.ingredientName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, ingredient.ingredientWeight), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, ingredient.ingredientCost), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_AddEditIngredient__WEBPACK_IMPORTED_MODULE_5__["default"], {
       id: ingredient.id,
       ingredient: ingredient
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-      className: "btn red darken-1",
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_DeleteModal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: "Ingredient",
       onClick: function onClick() {
         return deleteIngredient(ingredient.id);
-      }
-    }, "X")));
+      },
+      name: ingredient.ingredientName
+    })));
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, "loading"))))));
 };
 
@@ -80771,11 +80824,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_loaderHelper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions/loaderHelper */ "./resources/js/react/actions/loaderHelper.js");
 /* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./list.css */ "./resources/js/react/components/list.css");
 /* harmony import */ var _list_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_list_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _DeleteModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DeleteModal */ "./resources/js/react/components/DeleteModal.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -80846,16 +80901,17 @@ var ProductList = function ProductList() {
       key: product.id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "collapsible-header"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, product.productName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    }, product.productName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "collapsible-body"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: ""
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, product.productName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-      className: "btn red darken-1",
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, product.productName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_DeleteModal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: "Product",
       onClick: function onClick() {
         return deleteProduct(product.id);
-      }
-    }, "Delete"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
+      },
+      name: product.productName
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
       className: "striped"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, "Weight"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, "Cost"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tbody", null, product.components.map(function (component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", {

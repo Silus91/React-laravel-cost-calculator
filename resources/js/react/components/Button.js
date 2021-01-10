@@ -6,6 +6,7 @@ export const Button = (props) => {
       type={props.type}
       onClick={props.onCLick}
       className={props.className}
+      data-target={props.dataTarget}
     >
       {props.text}
     </button>
