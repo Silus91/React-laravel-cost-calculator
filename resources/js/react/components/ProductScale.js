@@ -7,6 +7,8 @@ import './list.css';
 const ProductScale = () => {
 
   const { store } = useContext(StoreContext);
+  useEffect(() => {
+  }, [store.products])
 
   return (
     <Collapsible title='Product Scale' icon='eject' bodyClassName='bodyPadding' headClassName='colla-header'>

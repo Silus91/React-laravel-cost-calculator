@@ -9,6 +9,9 @@ import DeleteModal from "./DeleteModal";
 const ProductList = () => {
   const API_BASE_URL = process.env.MIX_API_BASE_URL;
 
+  useEffect(() => {
+  }, [store.products])
+
   const deleteProduct = async (id) => {
     loadingAction(dispatch, async () => {
        await axios.delete(`${API_BASE_URL}/product/${id}`);

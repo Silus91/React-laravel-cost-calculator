@@ -80840,6 +80840,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var ProductList = function ProductList() {
   var API_BASE_URL = "https://magic-bubble-calculator.herokuapp.com/api";
+  useEffect(function () {}, [store.products]);
 
   var deleteProduct = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(id) {
@@ -80950,6 +80951,7 @@ var ProductScale = function ProductScale() {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_contexts_StoreContext__WEBPACK_IMPORTED_MODULE_1__["StoreContext"]),
       store = _useContext.store;
 
+  useEffect(function () {}, [store.products]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Collapsible_Collapsible__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Product Scale",
     icon: "eject",
