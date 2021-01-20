@@ -1,4 +1,4 @@
-<p align="center"><a href="https://magic-bubble-calculator.herokuapp.com/" target="_blank">Click me</a></p>
+<p align="center"><a href="https://magic-bubble-calculator.herokuapp.com/" target="_blank">Click here to see it live.</a></p>
 
 <p align="center">
 
