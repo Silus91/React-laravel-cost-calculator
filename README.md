@@ -10,7 +10,7 @@ Cost Calculator is custom build calculator for company Magic Bubble. Custom buil
 
 Build on Laravel with React and MySQL.
 
-To run this make shure you have .env and set up SQL of your choice.
+To run this make sure you have .env and set up SQL of your choice.
 
 php artisan serve
 

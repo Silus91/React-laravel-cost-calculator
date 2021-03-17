@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { StoreContext } from "../contexts/StoreContext";
 import Collapsible from "./Collapsible/Collapsible";
 import { PRODUCT_DELETE } from "../types/types";
