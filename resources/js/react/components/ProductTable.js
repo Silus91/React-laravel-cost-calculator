@@ -24,6 +24,12 @@ const ProductTable = (props) => {
     });
   };
 
+  const sumUpTotal = (array) => {
+    array.reduce((prev, next) => {
+      return parseFloat(prev + next);
+    }); 
+  }
+
   const totalValue = (eventTargetValue) => {
     const arr = props.product.components.map((component) => {
       if (component.id === props.product.components[0].id) {
@@ -34,9 +40,7 @@ const ProductTable = (props) => {
         );
       }
     });
-    return arr.reduce((prev, next) => {
-      return prev + next;
-    }, 0);
+    sumUpTotal(arr);
   };
 
   const totalWeight = (eventTargetValue) => {
@@ -47,9 +51,7 @@ const ProductTable = (props) => {
         return component.productRatio * eventTargetValue;
       }
     });
-    return arr.reduce((prev, next) => {
-      return parseFloat(prev + next);
-    });
+    sumUpTotal(arr);
   };
 
   const renderRatio = (product, component) => {
@@ -117,17 +119,3 @@ const ProductTable = (props) => {
 
 export default ProductTable;
 
-//   const sumTotal = (eventTargetValue, arg) => {
-//     const arr = product.componentList.map((component) => {
-//       if (component.id === product.componentList[0].id) {
-//         return eventTargetValue * arg;
-//       } else {
-//         return (
-//           component.productRatio * eventTargetValue * arg
-//         );
-//       }
-//     });
-//     return arr.reduce((prev, next) => {
-//       return prev + next;
-//     });
-//   };

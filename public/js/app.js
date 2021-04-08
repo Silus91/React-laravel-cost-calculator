@@ -81032,6 +81032,12 @@ var ProductTable = function ProductTable(props) {
     }));
   };
 
+  var sumUpTotal = function sumUpTotal(array) {
+    array.reduce(function (prev, next) {
+      return parseFloat(prev + next);
+    });
+  };
+
   var totalValue = function totalValue(eventTargetValue) {
     var arr = props.product.components.map(function (component) {
       if (component.id === props.product.components[0].id) {
@@ -81040,9 +81046,7 @@ var ProductTable = function ProductTable(props) {
         return component.productRatio * eventTargetValue * component.ingredientRatio;
       }
     });
-    return arr.reduce(function (prev, next) {
-      return prev + next;
-    }, 0);
+    sumUpTotal(arr);
   };
 
   var totalWeight = function totalWeight(eventTargetValue) {
@@ -81053,9 +81057,7 @@ var ProductTable = function ProductTable(props) {
         return component.productRatio * eventTargetValue;
       }
     });
-    return arr.reduce(function (prev, next) {
-      return parseFloat(prev + next);
-    });
+    sumUpTotal(arr);
   };
 
   var renderRatio = function renderRatio(product, component) {
@@ -81105,20 +81107,7 @@ var ProductTable = function ProductTable(props) {
   }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ProductTable); //   const sumTotal = (eventTargetValue, arg) => {
-//     const arr = product.componentList.map((component) => {
-//       if (component.id === product.componentList[0].id) {
-//         return eventTargetValue * arg;
-//       } else {
-//         return (
-//           component.productRatio * eventTargetValue * arg
-//         );
-//       }
-//     });
-//     return arr.reduce((prev, next) => {
-//       return prev + next;
-//     });
-//   };
+/* harmony default export */ __webpack_exports__["default"] = (ProductTable);
 
 /***/ }),
 
@@ -81250,21 +81239,22 @@ var StoreContextProvider = function StoreContextProvider(props) {
 
             case 2:
               ingredientResponse = _context.sent;
+              console.log("tutaj");
               dispatch({
                 type: _types_types__WEBPACK_IMPORTED_MODULE_3__["FETCH_INGREDIENTS"],
                 payload: ingredientResponse.data
               });
-              _context.next = 6;
+              _context.next = 7;
               return axios.get("".concat(API_BASE_URL, "/products"));
 
-            case 6:
+            case 7:
               productResponse = _context.sent;
               dispatch({
                 type: _types_types__WEBPACK_IMPORTED_MODULE_3__["FETCH_PRODUCTS"],
                 payload: productResponse.data
               });
 
-            case 8:
+            case 9:
             case "end":
               return _context.stop();
           }

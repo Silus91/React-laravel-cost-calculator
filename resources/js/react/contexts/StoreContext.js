@@ -15,6 +15,7 @@ const StoreContextProvider = (props) => {
   const fetchInitialValue = () => {
     loadingAction(dispatch, async () => {
         const ingredientResponse = await axios.get(`${API_BASE_URL}/ingredients`);
+        console.log("tutaj")
         dispatch({
             type: FETCH_INGREDIENTS,
             payload:ingredientResponse.data
