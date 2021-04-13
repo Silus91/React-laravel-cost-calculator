@@ -118,4 +118,3 @@ const ProductTable = (props) => {
 };
 
 export default ProductTable;
-
