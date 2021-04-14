@@ -3,7 +3,7 @@ import M from "materialize-css";
 import { Button } from './Button';
 
 
-const DeleteModal =({...props}) => {
+const DeleteModal = ({...props}) => {
 
   useEffect(() => {
     M.AutoInit();
