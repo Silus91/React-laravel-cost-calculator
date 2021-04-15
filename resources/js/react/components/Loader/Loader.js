@@ -5,7 +5,6 @@ import "./Loader.css";
 
   const Loader = () => {
 
-
     const { store } = useContext(StoreContext);
 
     return (
