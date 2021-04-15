@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from "react";
 import { StoreContext } from "../../contexts/StoreContext";
-
 import "./Loader.css";
 
   const Loader = () => {
