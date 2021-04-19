@@ -1,10 +1,7 @@
 export const storeReducer = (state, action) => {
   switch (action.type) {
     case "LOADING_UI":
-        return {
-          ...state,
-          loading: true,
-        };
+        return { ...state, loading: true };
     case "STOP_LOADING_UI":
       return {
         ...state,
